@@ -61,6 +61,23 @@ namespace pwiz.SkylineTestUtil
             }
         }
 
+        public static void AreEqual<TKey,TValue>(IDictionary<TKey,TValue> expected, IDictionary<TKey, TValue> actual, string message = null)
+        {
+            AreEqual(expected.Count, actual.Count, message);
+
+            foreach (var keyValuePairExpected in expected)
+            {
+                if (!actual.TryGetValue(keyValuePairExpected.Key, out var valueActual ))
+                {
+                    AreEqual(keyValuePairExpected.Key.ToString(), null, message);
+                }
+                else
+                {
+                    AreEqual(keyValuePairExpected.Value, valueActual, message);
+                }
+            }
+        }
+
         public static void AreEqual<T>(T expected, T actual, string message = null)
         {
             if (!Equals(expected, actual))
@@ -249,6 +266,13 @@ namespace pwiz.SkylineTestUtil
                 if (!string.IsNullOrEmpty(part) && !value.Contains(part))
                     Fail("The text '{0}' does not contain '{1}'", value, part);
             }
+        }
+
+        public static void DoesNotContain(string str, string substr, string message = null)
+        {
+            IsNotNull(str, "No message found");
+            if (str.Contains(substr))
+                Fail(TextUtil.LineSeparate(string.Format("The text '{0}' must not contain '{1}'", str, substr), message ?? string.Empty));
         }
 
         public static void FileExists(string filePath, string message = null)
@@ -839,7 +863,7 @@ namespace pwiz.SkylineTestUtil
                     // If only difference appears to be generated GUIDs or timestamps, let it pass
                     if (!LinesEquivalentIgnoringTimeStampsAndGUIDs(lineTarget, lineActual, columnTolerances))
                     {
-                        Fail(string.Format(@"Diff found at line {0}:\r\n{1}\r\n>\r\n{2}", count, lineTarget, lineActual));
+                        Fail(helpMsg + string.Format(@"Diff found at line {0}:\r\n{1}\r\n>\r\n{2}", count, lineTarget, lineActual));
                     }
                     lineEqualLast = lineTarget;
                     count++;

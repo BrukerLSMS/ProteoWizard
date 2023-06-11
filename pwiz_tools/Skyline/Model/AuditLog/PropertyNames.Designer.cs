@@ -214,6 +214,15 @@ namespace pwiz.Skyline.Model.AuditLog {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Proteins.
+        /// </summary>
+        public static string AssociateProteinsSettings_Proteins {
+            get {
+                return ResourceManager.GetString("AssociateProteinsSettings_Proteins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Peptide targets.
         /// </summary>
         public static string AssociateProteinsSettings_TargetPeptides {
@@ -1353,6 +1362,15 @@ namespace pwiz.Skyline.Model.AuditLog {
         public static string GroupComparisonDef_IdentityAnnotation {
             get {
                 return ResourceManager.GetString("GroupComparisonDef_IdentityAnnotation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MS level.
+        /// </summary>
+        public static string GroupComparisonDef_MsLevel {
+            get {
+                return ResourceManager.GetString("GroupComparisonDef_MsLevel", resourceCulture);
             }
         }
         
@@ -3958,6 +3976,15 @@ namespace pwiz.Skyline.Model.AuditLog {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Relative retention time.
+        /// </summary>
+        public static string StaticMod_RelativeRT {
+            get {
+                return ResourceManager.GetString("StaticMod_RelativeRT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Terminus.
         /// </summary>
         public static string StaticMod_Terminus {
@@ -4122,9 +4149,9 @@ namespace pwiz.Skyline.Model.AuditLog {
         /// <summary>
         ///   Looks up a localized string similar to Ion match tolerance.
         /// </summary>
-        public static string TransitionFilterAndLibrariesSettings_IonMatchTolerance {
+        public static string TransitionFilterAndLibrariesSettings_IonMatchMzTolerance {
             get {
-                return ResourceManager.GetString("TransitionFilterAndLibrariesSettings_IonMatchTolerance", resourceCulture);
+                return ResourceManager.GetString("TransitionFilterAndLibrariesSettings_IonMatchMzTolerance", resourceCulture);
             }
         }
         
@@ -4527,9 +4554,9 @@ namespace pwiz.Skyline.Model.AuditLog {
         /// <summary>
         ///   Looks up a localized string similar to Ion match tolerance.
         /// </summary>
-        public static string TransitionLibraries_IonMatchTolerance {
+        public static string TransitionLibraries_IonMatchMzTolerance {
             get {
-                return ResourceManager.GetString("TransitionLibraries_IonMatchTolerance", resourceCulture);
+                return ResourceManager.GetString("TransitionLibraries_IonMatchMzTolerance", resourceCulture);
             }
         }
         

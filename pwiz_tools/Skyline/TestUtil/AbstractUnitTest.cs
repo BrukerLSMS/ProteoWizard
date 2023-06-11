@@ -245,12 +245,12 @@ namespace pwiz.SkylineTestUtil
                 Directory.CreateDirectory(targetFolder);
 
             bool downloadFromS3 = Environment.GetEnvironmentVariable("SKYLINE_DOWNLOAD_FROM_S3") == "1";
-            string s3hostname = @"skyline-perftest.s3-us-west-2.amazonaws.com";
+            string s3hostname = @"ci.skyline.ms";
             string message = string.Empty;
             for (var retry = true; ; retry = false)
             {
                 var zipURL = downloadFromS3
-                    ? zipPath.Replace(@"skyline.gs.washington.edu", s3hostname).Replace(@"skyline.ms", s3hostname)
+                    ? zipPath.Replace(@"skyline.gs.washington.edu", s3hostname).Replace(@"https://skyline.ms", @"https://" + s3hostname)
                         .Replace(PanoramaDomainAndPath, s3hostname)
                     : zipPath;
 
@@ -369,7 +369,6 @@ namespace pwiz.SkylineTestUtil
         [TestInitialize]
         public void MyTestInitialize()
         {
-
             Program.UnitTest = true;
             Program.TestName = TestContext.TestName;
 
@@ -383,6 +382,14 @@ namespace pwiz.SkylineTestUtil
 
             Settings.Init();
 
+            // DesiredCleanupLevel is set in TestRunner, but we need it to work for VS Test also for code
+            // coverage builds
+            if (IsMsTestRun)
+            {
+                var isTeamCity = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable(@"TEAMCITY_VERSION"));
+                if (isTeamCity)
+                    DesiredCleanupLevel = DesiredCleanupLevel.all;
+            }
             STOPWATCH.Restart();
             Initialize();
         }
@@ -414,6 +421,8 @@ namespace pwiz.SkylineTestUtil
             Program.TestName = null;
 
         }
+
+        public bool IsParallelClient => TestContext.Properties.Contains("ParallelClientId");
 
         private void CleanupFiles()
         {

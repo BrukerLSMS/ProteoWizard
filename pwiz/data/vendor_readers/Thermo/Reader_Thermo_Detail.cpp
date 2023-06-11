@@ -116,10 +116,12 @@ PWIZ_API_DECL CVID translateAsInstrumentModel(InstrumentModelType instrumentMode
         case InstrumentModelType_Orbitrap_Fusion:           return MS_Orbitrap_Fusion;
         case InstrumentModelType_Orbitrap_Fusion_Lumos:     return MS_Orbitrap_Fusion_Lumos;
         case InstrumentModelType_Orbitrap_Fusion_ETD:       return MS_Orbitrap_Fusion_ETD;
+        case InstrumentModelType_Orbitrap_Ascend:           return MS_Orbitrap_Ascend;
         case InstrumentModelType_Orbitrap_ID_X:             return MS_Orbitrap_ID_X;
         case InstrumentModelType_TSQ_Quantiva:              return MS_TSQ_Quantiva;
         case InstrumentModelType_TSQ_Endura:                return MS_TSQ_Endura;
         case InstrumentModelType_TSQ_Altis:                 return MS_TSQ_Altis;
+        case InstrumentModelType_TSQ_Altis_Plus:            return MS_TSQ_Altis_Plus;
         case InstrumentModelType_TSQ_Quantis:               return MS_TSQ_Quantis;
         case InstrumentModelType_TSQ_8000_Evo:              return MS_TSQ_8000_Evo;
         case InstrumentModelType_TSQ_9000:                  return MS_TSQ_9000;
@@ -263,6 +265,7 @@ vector<InstrumentConfiguration> createInstrumentConfigurations(const Component& 
         case InstrumentModelType_Orbitrap_Fusion:
         case InstrumentModelType_Orbitrap_Fusion_Lumos:
         case InstrumentModelType_Orbitrap_Fusion_ETD:
+        case InstrumentModelType_Orbitrap_Ascend:
         case InstrumentModelType_Orbitrap_ID_X:
         case InstrumentModelType_Orbitrap_Eclipse:
             configurations.push_back(InstrumentConfiguration());
@@ -355,6 +358,7 @@ vector<InstrumentConfiguration> createInstrumentConfigurations(const Component& 
         case InstrumentModelType_TSQ_Quantiva:
         case InstrumentModelType_TSQ_Endura:
         case InstrumentModelType_TSQ_Altis:
+        case InstrumentModelType_TSQ_Altis_Plus:
         case InstrumentModelType_TSQ_Quantis:
             configurations.push_back(InstrumentConfiguration());
             configurations.back().componentList.push_back(commonSource);

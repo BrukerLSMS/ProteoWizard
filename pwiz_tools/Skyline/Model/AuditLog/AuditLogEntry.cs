@@ -19,6 +19,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
@@ -229,6 +230,8 @@ namespace pwiz.Skyline.Model.AuditLog
                     string msg = string.Format(
                         AuditLogStrings.AuditLogList_Validate_Audit_log_is_corrupted__Audit_log_entry_time_stamps_and_indices_should_be_decreasing,
                         entry.LogIndex, entry.TimeStampUTC, logIndex, time);
+                    Debugger.Launch();
+                    Debugger.Break();
                     throw new AuditLogException(msg);
                 }
                 time = entry.TimeStampUTC;
