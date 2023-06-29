@@ -182,7 +182,7 @@ namespace pwiz.Skyline.Controls.Databinding
             }
             catch (Exception ex)
             {
-                if (ExceptionUtil.IsProgrammingDefect(ex))
+                if (ExceptionUtil.IsProgrammingDefect(ex) && !(ex is ObjectDisposedException))
                 {
                     Program.ReportException(ex);
                 }
