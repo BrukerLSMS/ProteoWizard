@@ -1932,6 +1932,15 @@ namespace pwiz.Skyline.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Find &amp;minimal gene group list that explains all peptides.
+        /// </summary>
+        public static string AssociateProteinsDlg_Find_minimal_gene_group_list_that_explains_all_peptides {
+            get {
+                return ResourceManager.GetString("AssociateProteinsDlg_Find_minimal_gene_group_list_that_explains_all_peptides", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Find &amp;minimal protein group list that explains all peptides.
         /// </summary>
         public static string AssociateProteinsDlg_Find_minimal_protein_group_list_that_explains_all_peptides {
@@ -1960,6 +1969,15 @@ namespace pwiz.Skyline.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mi&amp;n peptides per gene.
+        /// </summary>
+        public static string AssociateProteinsDlg_Min_peptides_per_gene {
+            get {
+                return ResourceManager.GetString("AssociateProteinsDlg_Min_peptides_per_gene", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mi&amp;n peptides per protein group.
         /// </summary>
         public static string AssociateProteinsDlg_Min_peptides_per_protein_group {
@@ -1984,6 +2002,15 @@ namespace pwiz.Skyline.Properties {
             get {
                 return ResourceManager.GetString("AssociateProteinsDlg_OnShown_Organize_all_document_peptides_into_associated_prote" +
                         "ins_or_protein_groups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Remove subset genes.
+        /// </summary>
+        public static string AssociateProteinsDlg_Remove_subset_genes {
+            get {
+                return ResourceManager.GetString("AssociateProteinsDlg_Remove_subset_genes", resourceCulture);
             }
         }
         
@@ -25183,6 +25210,15 @@ namespace pwiz.Skyline.Properties {
         public static string ProteinAssociation_CalculateProteinGroups_Group_of__0__proteins {
             get {
                 return ResourceManager.GetString("ProteinAssociation_CalculateProteinGroups_Group_of__0__proteins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculating gene groups.
+        /// </summary>
+        public static string ProteinAssociation_CalculateProteinOrGeneGroups_Calculating_gene_groups {
+            get {
+                return ResourceManager.GetString("ProteinAssociation_CalculateProteinOrGeneGroups_Calculating_gene_groups", resourceCulture);
             }
         }
         

@@ -79,6 +79,7 @@ Import Peptide Search > Import FASTA > Decoy generation method is "Shuffle Seque
 Import Peptide Search > Import FASTA > Decoys per target is "1"
 Import Peptide Search > Import FASTA > Automatically train mProphet model is True
 Import Peptide Search > Associate Proteins > Group proteins is False
+Import Peptide Search > Associate Proteins > Group at gene level is False
 Import Peptide Search > Associate Proteins > Find minimal protein list is False
 Import Peptide Search > Associate Proteins > Remove subset proteins is False
 Import Peptide Search > Associate Proteins > Shared peptides option is "Removed (peptides must be unique to a single protein)"
@@ -233,6 +234,7 @@ Import FASTA =
 Associate Proteins = 
 {
     Group proteins = False,
+    Group at gene level = False,
     Find minimal protein list = False,
     Remove subset proteins = False,
     Shared peptides option = "Removed (peptides must be unique to a single protein)",

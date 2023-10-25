@@ -946,4 +946,7 @@ greater peak area.</value>
   <data name="_exp_mprophet_targets_only" xml:space="preserve">
     <value>Include feature scores only for targets. Requires the --exp-mprophet-file argument.</value>
   </data>
+  <data name="_associate_proteins_gene_level_parsimony" xml:space="preserve">
+    <value>Associate peptides with genes (or gene groups) instead of proteins, and apply parsimony options to that association.</value>
+  </data>
 </root>
