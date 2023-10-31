@@ -19,7 +19,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NHibernate.Loader;
 using pwiz.Common.Collections;
 using pwiz.Common.SystemUtil;
 using pwiz.ProteomeDatabase.API;
@@ -40,7 +39,6 @@ namespace pwiz.Skyline.Model.Proteome
         private ProteinGroupMetadata(ProteinGroupMetadata other, WebSearchInfo webSearchInfo = null) : base(other.Name,
             other.Description, other.PreferredName, other.Accession, other.Gene, other.Species, (webSearchInfo ?? other.WebSearchInfo).ToString())
         {
-            //var updatedWebSearchList = other.ProteinMetadataList.Select(o => o.ChangeWebSearchInfo(webSearchInfo ?? other.WebSearchInfo));
             ProteinMetadataList = ImmutableList<ProteinMetadata>.ValueOf(other.ProteinMetadataList);
         }
 
