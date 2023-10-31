@@ -230,7 +230,7 @@ namespace pwiz.Skyline.Model.Proteome
             [Track(ignoreDefaultParent:true)]
             public bool GroupProteins { get; private set; }
 
-            [Track(ignoreDefaultParent: true)]
+            [Track(defaultValues: typeof(DefaultValuesFalse))]
             public bool GeneLevelParsimony { get; private set; }
 
             [Track(ignoreDefaultParent: true)]
@@ -476,7 +476,7 @@ namespace pwiz.Skyline.Model.Proteome
             else
             {
                 _finalResults = _results;
-                _finalResults.GeneLevelParsimony = geneLevel;
+                _finalResults.GeneLevelParsimony = false;
                 ParsimoniousProteins = AssociatedProteins;
             }
 

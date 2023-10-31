@@ -13918,12 +13918,12 @@ If you choose Disable, you can enable Auto-select later with the "Refine &gt; Ad
     <value>Calculating gene groups</value>
   </data>
   <data name="AssociateProteinsDlg_Find_minimal_gene_group_list_that_explains_all_peptides" xml:space="preserve">
-	  <value>Find &amp;minimal gene group list that explains all peptides</value>
+    <value>Find &amp;minimal gene group list that explains all peptides</value>
   </data>
   <data name="AssociateProteinsDlg_Remove_subset_genes" xml:space="preserve">
-	  <value>&amp;Remove subset genes</value>
+    <value>&amp;Remove subset genes</value>
   </data>
   <data name="AssociateProteinsDlg_Min_peptides_per_gene" xml:space="preserve">
-	  <value>Mi&amp;n peptides per gene</value>
+    <value>Mi&amp;n peptides per gene</value>
   </data>
 </root>

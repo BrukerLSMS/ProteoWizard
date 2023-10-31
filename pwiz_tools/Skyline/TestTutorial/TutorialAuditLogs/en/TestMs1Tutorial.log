@@ -47,7 +47,6 @@ Import Peptide Search > Configure Full-Scan Settings > Isotope labeling enrichme
 Import Peptide Search > Import FASTA > Max missed cleavages is "2"
 Import Peptide Search > Import FASTA > FASTA file is "11_proteins.fasta"
 Import Peptide Search > Associate Proteins > Group proteins is False
-Import Peptide Search > Associate Proteins > Group at gene level is False
 Import Peptide Search > Associate Proteins > Find minimal protein list is False
 Import Peptide Search > Associate Proteins > Remove subset proteins is False
 Import Peptide Search > Associate Proteins > Shared peptides option is "Duplicated between proteins"
@@ -91,7 +90,6 @@ Import FASTA =
 Associate Proteins = 
 {
     Group proteins = False,
-    Group at gene level = False,
     Find minimal protein list = False,
     Remove subset proteins = False,
     Shared peptides option = "Duplicated between proteins",

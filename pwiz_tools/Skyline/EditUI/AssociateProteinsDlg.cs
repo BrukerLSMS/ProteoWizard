@@ -341,9 +341,9 @@ namespace pwiz.Skyline.EditUI
             {
                 cbGroupProteins.Checked = true;
                 cbGroupProteins.Enabled = false;
-                lblMinimalProteinList.Text = "Find &minimal gene group list that explains all peptides";
-                lblRemoveSubsetProteins.Text = "&Remove subset genes";
-                lblMinPeptides.Text = "Mi&n peptides per gene";
+                lblMinimalProteinList.Text = Resources.AssociateProteinsDlg_Find_minimal_gene_group_list_that_explains_all_peptides;
+                lblRemoveSubsetProteins.Text = Resources.AssociateProteinsDlg_Remove_subset_genes;
+                lblMinPeptides.Text = Resources.AssociateProteinsDlg_Min_peptides_per_gene;
             }
             else
             {
